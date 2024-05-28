@@ -1,11 +1,11 @@
-import { useEffect, setState } from "react";
+import { useEffect, setState, useState } from "react";
 import { useBaseColourGlobalData, useBaseColourGlobalDispatch } from "../contexts/baseColourContext";
 
 
 export default function GeneratorPage(){
     
     // first var is readonly value, 2nd is function to edit that value
-    let [formBaseColour, setFormBaseColour] = setState("#000000");
+    let [formBaseColour, setFormBaseColour] = useState("#000000");
 
     // Base colour from global state
     let baseColourGlobal = useBaseColourGlobalData();
